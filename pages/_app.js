@@ -1,12 +1,10 @@
-import NavBar from "../components/NavBar";
 import "../styles/globals.css";
+import Layout from "./Layout";
 
 export default function App({ Component, pageProp }) {
   return (
-    <>
-      <NavBar />
+    <Layout>
       <Component {...pageProp} />
-
       <style jsx global>{`
         .active {
           color: tomato;
@@ -15,6 +13,6 @@ export default function App({ Component, pageProp }) {
           text-decoration: none;
         }
       `}</style>
-    </>
+    </Layout>
   );
 }
